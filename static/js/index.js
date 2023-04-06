@@ -1,9 +1,9 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 
-var INTERP_BASE = "./static/interpolation/interactive_webp";
+var INTERP_BASE = "./static/interpolation/interactive";
 var NUM_INTERP_FRAMES = 24;
-var old_img_t = 20;
+var old_img_t = 6;
 var canv = document.createElement("canvas");
 const interp_images = Object.create(null);
 // var interp_images = [];
@@ -12,6 +12,7 @@ var disparity_image;
 var pixelData;
 var image;
 var current_dist = 170;
+var demo_guide;
 
 function preloadInterpolationImages() {
 
@@ -19,13 +20,25 @@ function preloadInterpolationImages() {
   var dist = dists[j];
   interp_images[dist] = []
     for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-      var path = INTERP_BASE + '/' + "model_output_aperture_" + i + "_focus_" + dist + ".webp";
+      var path = INTERP_BASE + '/' + "model_output_aperture_" + i + "_focus_" + dist + ".jpg";
       interp_images[dist][i] = new Image();
       interp_images[dist][i].src = path;
     }
+    demo_guide = new Image()
+    demo_guide.src = INTERP_BASE + '/demo_guide.jpg'
 }
   disparity_image = new Image();
   disparity_image.src = "./static/interpolation/copy/rounded.png";
+}
+
+function initInterpolationImage() {
+  image = demo_guide;
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  // console.log("fake image size " + image.width + " " + image.height + " wrapper width maybe " + $('#interpolation-image-wrapper').width);
+  image.onmousedown = GetCoordinates;
+  
+  $('#interpolation-image-wrapper').empty().append(image);
 }
 
 function setInterpolationImage(i) {
@@ -47,8 +60,6 @@ function setInterpolationImage(i) {
     console.log("pixel data " + pixelData[i]);
   }
   
-
-
 
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
@@ -105,12 +116,10 @@ $(document).ready(function() {
       setInterpolationImage(this.value); //console.log(this.value); console.log($('#interpolation-slider')); console.log(this);
     });
 
-    $('#interpolation-aperture-slider').on('input', function(event) {
-      console.log("aperture slider value " + this.value);
-    });
-    setInterpolationImage(14);
+    // setInterpolationImage(14);
+    initInterpolationImage();
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
-    $('#interpolation-slider').prop('value', 14);
+    $('#interpolation-slider').prop('value', old_img_t);
 
     bulmaSlider.attach();
 
@@ -245,53 +254,22 @@ function toggleimage(image_to_show, image_to_hide, btn_to_active, btn_to_normal)
   document.getElementById(btn_to_normal).className = 'btn';
 }
 
+const images = document.querySelectorAll('.slider-image');
+let loadedCount = 0;
+
+images.forEach(function(image) {
+  image.onload = function() {
+    loadedCount++;
+    console.log("loaded count " + loadedCount);
+
+    if (loadedCount === images.length) {
+      console.log('All images loaded successfully');
+    }
+  };
+});
 
 $(function(){
-
-  $("#container1").twentytwenty({
-    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
-    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
-    before_label: 'Input', // Set a custom before label
-    after_label: 'Output', // Set a custom after label
-    no_overlay: false, //Do not show the overlay with before and after
-    move_slider_on_hover: true, // Move slider on mouse hover?
-    move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-    click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-  });
-
-  $("#container2").twentytwenty({
-    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
-    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
-    before_label: 'Input', // Set a custom before label
-    after_label: 'Output', // Set a custom after label
-    no_overlay: false, //Do not show the overlay with before and after
-    move_slider_on_hover: true, // Move slider on mouse hover?
-    move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-    click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-  });
-
-  $("#container3").twentytwenty({
-    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
-    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
-    before_label: 'Input', // Set a custom before label
-    after_label: 'Output', // Set a custom after label
-    no_overlay: false, //Do not show the overlay with before and after
-    move_slider_on_hover: true, // Move slider on mouse hover?
-    move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-    click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-  });
-
-  $("#container4").twentytwenty({
-    default_offset_pct: 0.5, // How much of the before image is visible when the page loads
-    orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
-    before_label: 'Input', // Set a custom before label
-    after_label: 'Output', // Set a custom after label
-    no_overlay: false, //Do not show the overlay with before and after
-    move_slider_on_hover: true, // Move slider on mouse hover?
-    move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-    click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-  });
-
+  console.log("num of slider images " + images.length);
   $(".compare").twentytwenty({
     default_offset_pct: 0.5, // How much of the before image is visible when the page loads
     orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
@@ -305,4 +283,8 @@ $(function(){
 
   document.getElementById('book_deblurring').style.display = 'none';
   document.getElementById('microkitchen_refocusing').style.display = 'none';
+});
+
+$(window).load(function() {
+  $(window).trigger("resize.twentytwenty");
 });

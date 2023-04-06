@@ -72,7 +72,7 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hadizayer.github.io/AutoPhoto_webpage/">
+          <a class="navbar-item" href="https://hadizayer.github.io/AutoPhoto_jpgage/">
             AutoPhoto
           </a>
         </div>
@@ -88,7 +88,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DC<sup>2</sup>: Dual-Camera Defocus Control by Learning to Refocus</h1>
+          <h1 class="title is-1 publication-title"><b>DC</b><sup>2</sup>: <font color="#de5246 ">D</font>ual-<font color="#de5246 ">C</font>amera <font color="#de5246 ">D</font>efocus <font color="#de5246 ">C</font>ontrol by Learning to Refocus</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://hadizayer.github.io">Hadi Alzayer</a><sup>🐢,<img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -324,7 +324,7 @@
       </div>
     </div>
     <div  class="columns is-centered has-text-centered" style="text-align: center;">  
-       <p><br/>Using dual-camera, we can control defocus by simply passing a defocus map to the model (shown on top left). First frame of each video is the input view.</p> </div>
+       <p><br/>Using dual-camera, we can control defocus by simply passing a defocus map to the model (shown on top left). First frame of each video is the input view. <br/> Please view in full screen for highest quality.</p> </div>
   </div>
 </section>
 
@@ -470,14 +470,14 @@
         <br> 
         We train our defocus control model (Detail Fusion Network -- DFNet) to refocus using dual-camera input, by giving it input and target defocus maps. The value of each pixel in the defocus map is proportional to how blurry that pixel is. <br> <br>
         <center>
-          <img src="./static/images/refocus_idea_website.webp"  width="500">
+          <img src="./static/images/refocus_idea_website.jpg"  width="500">
         </center>
 
         <br> 
         Then after training the model to refocus, we can perform arbitrary defocus control by simply maniuplating the target defocus map at test time! <br> <br>
 
         <center>
-          <img src="./static/images/test_time_demonstration_webstie.webp" width="500">
+          <img src="./static/images/test_time_demonstration_webstie.jpg" width="500">
         </center>
           
         </div>
@@ -497,17 +497,17 @@
 
           <div id="kitchen_deblurring">
           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
-            <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
-              <img src="./static/images/comparisons/kitchen_src_w.webp" border="1" class="zoom">
+            <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-jpg: middle;margin: 0; padding: 0;">
+              <img src="./static/images/comparisons/kitchen_src_w.jpg" border="1" class="zoom">
             </label>
 
             <label class="label" id="example1_deblurring_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-              <img src="./static/images/comparisons/match_fov_uw_final_kitchen.webp" border="1" class="zoom">
+              <img src="./static/images/comparisons/match_fov_uw_final_kitchen.jpg" border="1" class="zoom">
             </label>
 
 
             <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-              <img src="./static/images/comparisons/kitchen_GT.webp" border="1" class="zoom"></label>
+              <img src="./static/images/comparisons/kitchen_GT.jpg" border="1" class="zoom"></label>
           </div>
           <!-- <img src=" border="1" class="zoom"> -->
           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
@@ -524,22 +524,22 @@
 
           <div class="compare">
             <!-- The before image is first -->
-            <img src="./static/images/comparisons/kitchen_baseline.webp" />
+            <img class="slider-image" src="./static/images/comparisons/kitchen_baseline.jpg" />
             <!-- The after image is last -->
-            <img src="./static/images/comparisons/kitchen_ours.webp" />
+            <img class="slider-image" src="./static/images/comparisons/kitchen_ours.jpg" />
            </div>
            </div>
 
            <div id="book_deblurring">
            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
             <label class="label" id="example2_deblurring_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-              <img src="./static/images/comparisons/book_src_w.webp" border="1" class="zoom">
+              <img src="./static/images/comparisons/book_src_w.jpg" border="1" class="zoom">
             </label>
             <label class="label" id="example2_deblurring_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-              <img src="./static/images/comparisons/book_uw.webp" border="1" class="zoom">
+              <img src="./static/images/comparisons/book_uw.jpg" border="1" class="zoom">
             </label>
             <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-              <img src="./static/images/comparisons/book_GT.webp" border="1" class="zoom"></label>
+              <img src="./static/images/comparisons/book_GT.jpg" border="1" class="zoom"></label>
           </div>
           <!-- <img src=" border="1" class="zoom"> -->
           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
@@ -556,12 +556,12 @@
 
           <div class="compare">
             <!-- The before image is first -->
-            <img src="./static/images/comparisons/book_baseline.webp" />
+            <img class="slider-image" src="./static/images/comparisons/book_baseline.jpg" />
             <!-- The after image is last -->
-            <img src="./static/images/comparisons/book_ours.webp" />
+            <img class="slider-image" src="./static/images/comparisons/book_ours.jpg" />
            </div>
            </div>
-           <center><h3 class="title is-5">Baseline | Ours</h3></center>
+           <center><h3 class="title is-5"><a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a> | Ours</h3></center>
 
            <h3 class="title is-4">Refocusing</h3>
 
@@ -571,17 +571,17 @@
 
            <div id="cafeteria_refocusing">
             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
-              <label class="label" id="example1_refocusing_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
-                <img src="./static/images/comparisons/cafeteria_src_w.webp" border="1" class="zoom">
+              <label class="label" id="example1_refocusing_w" style="width: 49%; vertical-jpg: middle;margin: 0; padding: 0;">
+                <img src="./static/images/comparisons/cafeteria_src_w.jpg" border="1" class="zoom">
               </label>
   
               <label class="label" id="example1_refocusing_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-                <img src="./static/images/comparisons/cafeteria_uw.webp" border="1" class="zoom">
+                <img src="./static/images/comparisons/cafeteria_uw.jpg" border="1" class="zoom">
               </label>
   
   
               <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-                <img src="./static/images/comparisons/cafeteria_GT.webp" border="1" class="zoom"></label>
+                <img src="./static/images/comparisons/cafeteria_GT.jpg" border="1" class="zoom"></label>
             </div>
             <!-- <img src=" border="1" class="zoom"> -->
             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
@@ -598,22 +598,22 @@
   
             <div class="compare">
               <!-- The before image is first -->
-              <img src="./static/images/comparisons/cafeteria_baseline.webp" />
+              <img class="slider-image" src="./static/images/comparisons/cafeteria_baseline.jpg" />
               <!-- The after image is last -->
-              <img src="./static/images/comparisons/cafeteria_ours.webp" />
+              <img class="slider-image" src="./static/images/comparisons/cafeteria_ours.jpg" />
              </div>
              </div>
   
              <div id="microkitchen_refocusing">
              <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
               <label class="label" id="example2_refocusing_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-                <img src="./static/images/comparisons/microkitchen_src_w.webp" border="1" class="zoom">
+                <img src="./static/images/comparisons/microkitchen_src_w.jpg" border="1" class="zoom">
               </label>
               <label class="label" id="example2_refocusing_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
-                <img src="./static/images/comparisons/microkitchen_uw.webp" border="1" class="zoom">
+                <img src="./static/images/comparisons/microkitchen_uw.jpg" border="1" class="zoom">
               </label>
               <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-                <img src="./static/images/comparisons/microkitchen_target.webp" border="1" class="zoom"></label>
+                <img src="./static/images/comparisons/microkitchen_target.jpg" border="1" class="zoom"></label>
             </div>
             <!-- <img src=" border="1" class="zoom"> -->
             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
@@ -630,13 +630,16 @@
   
             <div class="compare">
               <!-- The before image is first -->
-              <img src="./static/images/comparisons/mircokitechen_baseline.webp" />
+              <img class="slider-image" src="./static/images/comparisons/mircokitechen_baseline.jpg" />
               <!-- The after image is last -->
-              <img src="./static/images/comparisons/microkitchen_ours.webp" />
+              <img class="slider-image" src="./static/images/comparisons/microkitchen_ours.jpg" />
              </div>
              </div>
-             <center><h3 class="title is-5">Baseline | Ours</h3></center>
-
+             <center><h3 class="title is-5">Deblur (<a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a>) + Blur (<a href="https://juewenpeng.github.io/BokehMe/">BokehMe</a>) | Ours</h3></center>
+             <script>
+              const images = document.querySelectorAll('.slider-image');
+              console.log("length of images " + images.length); // Output: NodeList [img.my-image, img.my-image, img.my-image]
+            </script>
            <!-- <h3 class="title is-4">Blurring</h3>
 
            <button class="btn active" id="example1_blurring_btn" onclick="changeexample('game_room_blurring', 'office_plant_blurring', 'example1_blurring_btn', 'example2_blurring_btn')">Example 1</button>
@@ -645,14 +648,14 @@
  
            <div id="game_room_blurring">
            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
-             <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
-               <img src="./static/images/comparisons/gameroom_aif.webp" border="1" class="zoom">
+             <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-jpg: middle;margin: 0; padding: 0;">
+               <img src="./static/images/comparisons/gameroom_aif.jpg" border="1" class="zoom">
              </label>
 
  
  
              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-               <img src="./static/images/comparisons/gameroom_src_w.webp" border="1" class="zoom"></label>
+               <img src="./static/images/comparisons/gameroom_src_w.jpg" border="1" class="zoom"></label>
            </div>
            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
             <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Input</label>
@@ -661,18 +664,18 @@
            <label class="label"><br/></label>
  
            <div class="compare">
-             <img src="./static/images/comparisons/gameroom_baseline.webp" />
-             <img src="./static/images/comparisons/gameroom_ours.webp" />
+             <img src="./static/images/comparisons/gameroom_baseline.jpg" />
+             <img src="./static/images/comparisons/gameroom_ours.jpg" />
             </div>
             </div>
  
             <div id="office_plant_blurring">
             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
              <label class="label" id="example2_deblurring_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-               <img src="./static/images/comparisons/office_plant_aif.webp" border="1" class="zoom">
+               <img src="./static/images/comparisons/office_plant_aif.jpg" border="1" class="zoom">
              </label>
              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
-               <img src="./static/images/comparisons/office_plant_src_w.webp" border="1" class="zoom"></label>
+               <img src="./static/images/comparisons/office_plant_src_w.jpg" border="1" class="zoom"></label>
            </div>
 
            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
@@ -682,8 +685,8 @@
            <label class="label"><br/></label>
  
            <div class="compare">
-             <img src="./static/images/comparisons/office_plant_baseline.webp" />
-             <img src="./static/images/comparisons/office_plant_ours.webp"/>
+             <img src="./static/images/comparisons/office_plant_baseline.jpg" />
+             <img src="./static/images/comparisons/office_plant_ours.jpg"/>
             </div>
             </div>
             <center><h3 class="title is-5">Baseline | Ours</h3></center>  -->
@@ -708,9 +711,9 @@
           <body><a href="https://www.adobe.com/creativecloud/photography/discover/tilt-shift-photography.html"> Tilt shift </a> can be used to control the depth of field, and produce minitaure-like effect. With hardware, it is done by tilting the lens with respect to the sensor, but here we simulate it by setting the target defocus map to correspond to a very narrow DoF. At the top of the image below, you can view the source defocus map (all-in-focus so all black) and target defocus map used for this example. </body>
           <div class="compare">
             <!-- The before image is first -->
-            <img src="./static/images/tiltshift_input_def.jpg"/>
+            <img class="slider-image" src="./static/images/tiltshift_input_def.jpg"/>
             <!-- The after image is last -->
-            <img src="./static/images/tiltshift_output_def.jpg" />
+            <img class="slider-image" src="./static/images/tiltshift_output_def.jpg" />
             
            </div>
            <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
@@ -719,9 +722,9 @@
            <body><a href="https://www.studiobinder.com/blog/split-diopter-lens/">Split focus</a> is a cinematic effect used in movies to emphasize and focus on two subjects at different distances from the camera. It often requires custom lens to make it work with hardware, but we can simply do it in software with our method. Here we set the left half of the photo to be focused on the woman, and the right half is focused on the man and with a reduced DoF for emphasis. You can compare the source defocus map and target defocus map used to generate this photo.</body>
           <div class="compare">
             <!-- The before image is first -->
-            <img src="./static/images/splitfocus_input_def.jpg" />
+            <img class="slider-image" src="./static/images/splitfocus_input_def.jpg" />
             <!-- The after image is last -->
-            <img src="./static/images/splitfocus_output_def.jpg" />
+            <img class="slider-image" src="./static/images/splitfocus_output_def.jpg" />
            </div>
 
            <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
@@ -731,9 +734,9 @@
            <center>
            <div class="compare" style=" width: 65%;">
             <!-- The before image is first -->
-            <img src="./static/images/seg_mask_input_def.jpg"/>
+            <img class="slider-image" src="./static/images/seg_mask_input_def.jpg"/>
             <!-- The after image is last -->
-            <img src="./static/images/seg_mask_output_def.jpg"/>
+            <img class="slider-image" src="./static/images/seg_mask_output_def.jpg"/>
            </div>
           </center>
 
