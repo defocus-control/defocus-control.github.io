@@ -157,10 +157,6 @@
     color: white;
   }
 
-  .twentytwenty-container {
-    min-height: 200px;
-}
-
   /* .twentytwenty-container {
     min-height: 200px;
 } */
@@ -573,7 +569,11 @@
             <img class="slider-image" src="./static/images/comparisons/book_ours.jpg" />
            </div>
            </div>
-           <center><h3 class="title is-5"><a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a> | Ours</h3></center>
+           <!-- <center><h3 class="title is-5"><a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a> | Ours</h3></center> -->
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+           <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5"><a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a></h3></label>
+           <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Ours</h3></label>
+          </div>
 
            <h3 class="title is-4">Refocusing</h3>
 
@@ -647,7 +647,10 @@
               <img class="slider-image" src="./static/images/comparisons/microkitchen_ours.jpg" />
              </div>
              </div>
-             <center><h3 class="title is-5">Deblur (<a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a>) + Blur (<a href="https://juewenpeng.github.io/BokehMe/">BokehMe</a>) | Ours</h3></center>
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Deblur (<a href="http://lyruan.com/Projects/DRBNet/index.html">DRBNet</a>) + Blur (<a href="https://juewenpeng.github.io/BokehMe/">BokehMe</a>)</h3></label>
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Ours</h3></label>
+             </div>
              <script>
               const images = document.querySelectorAll('.slider-image');
               console.log("length of images " + images.length); // Output: NodeList [img.my-image, img.my-image, img.my-image]
@@ -728,7 +731,10 @@
             <img class="slider-image" src="./static/images/tiltshift_output_def_labelled.jpg" />
             
            </div>
-           <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+           </div>
 
            <h3 class="title is-4">Split focus effect</h3>
            <body><a href="https://www.studiobinder.com/blog/split-diopter-lens/">Split focus</a> is a cinematic effect used in movies to emphasize and focus on two subjects at different distances from the camera. It often requires custom lens to make it work with hardware, but we can simply do it in software with our method. Here we set the left half of the photo to be focused on the woman, and the right half is focused on the man and with a reduced DoF for emphasis. You can compare the source defocus map and target defocus map used to generate this photo.</body>
@@ -739,7 +745,10 @@
             <img class="slider-image" src="./static/images/splitfocus_output_def_labelled.jpg" />
            </div>
 
-           <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+           </div>
 
            <h3 class="title is-4">Content driven defocus control</h3>
            <body>Here we choose to highlight the woman and dog by simply setting them to be all-in-focus and blur out everything else. We simply set the target defocus map to be the segmentation mask we created.</body>
@@ -752,7 +761,12 @@
            </div>
           </center>
 
-          <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <label class="label" style="width: 20%; margin: 0; padding: 0; text-align: left;"></label>
+            <label class="label" style="width: 30%; margin: 0; padding: 0; text-align: left;"><h3 class="title is-5">Input</h3></label>
+            <label class="label" style="width: 30%; margin: 0; padding: 0; text-align: right;"><h3 class="title is-5">Output</h3></label>
+            <label class="label" style="width: 20%; margin: 0; padding: 0; text-align: left;"></label>
+           </div>
 
           <!-- <div id="comparison_splitfocus">
             <figure>
