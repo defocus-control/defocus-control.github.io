@@ -465,7 +465,7 @@
         <div class="content has-text-justified">
           We can't collect dataset of smartphone photos with variable depth of fields (due to the fix aperture), but we CAN refocus!  Since image refocus requires deblurring and blurring different regions of the image at the same time, that means that image refocus is at least as hard as DoF Control. Based on this observation, we hypothesize that a model trained on image refocus can also perform DoF control, so we use image refocus as a <i>proxy task</i> to learn arbitrary defocus contorl. So to train a model, we collected a dataset of 100 focus-stacks. <br> <br>
           <center>
-          <img src="./static/images/dataset_vis_png.png"  width="500">
+          <img src="./static/images/dataset_vis_png.jpg"  width="500">
         </center>
         <br> 
         We train our defocus control model (Detail Fusion Network -- DFNet) to refocus using dual-camera input, by giving it input and target defocus maps. The value of each pixel in the defocus map is proportional to how blurry that pixel is. <br> <br>
