@@ -30,7 +30,8 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./static/css/before_after.css">
+  <link rel="icon" href="./static/images/cameraicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -40,6 +41,11 @@
   <link rel="stylesheet" href="./static/css/magnify.css">
   <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="./static/js/jquery.magnify.js"></script>
+
+  <script src="twentytwenty/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
+  <script src="twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
 </head>
 <body>
 
@@ -85,39 +91,79 @@
           <h1 class="title is-1 publication-title">DC<sup>2</sup>: Dual-Camera Defocus Control by Learning to Refocus</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://hadizayer.github.io">Hadi Alzayer</a><sup>1,2</sup>,</span>
+              <a href="https://hadizayer.github.io">Hadi Alzayer</a><sup>🐢,<img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/abdullah-abuolaim/">Abdullah Abuolaim</a><sup>2</sup>,</span>
+              <a href="https://sites.google.com/view/abdullah-abuolaim/">Abdullah Abuolaim</a><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="author-block">
-              Leung Chun Chan<sup>2</sup>,
+               <a href="https://www.linkedin.com/in/ryan-chan-74599014/">Leung Chun Chan</a><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              Yang Yang<sup>2</sup>,
+               <a href="https://www.linkedin.com/in/yang-yang-92b5a3160/">Yang Yang</a><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="author-block">
-             Ying Chen<sup>2</sup>,
+             <a href="https://www.linkedin.com/in/ying-chen-lou-1175542/">Ying Chen</a><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://jbhuang0604.github.io">Jia-Bin Huang</a><sup>1</sup>,
+              <a href="https://jbhuang0604.github.io">Jia-Bin Huang</a><sup>🐢</sup>&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://abhishekkar.info">Abhishek Kar</a><sup>2</sup>
+              <a href="https://abhishekkar.info">Abhishek Kar</a><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Maryland</span>
-            <span class="author-block"><sup>2</sup>Google</span>
+
+            <span class="author-block"><sup>🐢</sup>University of Maryland &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup><img src="./static/images/google_logo.png" width="20" style="position: relative; top: 4px;"></sup>Google</span>
+            <h2 class="title is-3">CVPR 2023</h2>
+            <!-- <span class="author-block"><sup></span> -->
           </div>
           <script>
             $(document).ready(function() {
-              $('.zoom').magnify();
+              // var $zoom = $('.zoom').magnify(
+              // //   {
+              // //   magnifiedWidth: 1000,
+              // //   magnifiedHeight: 753
+              // // }
+              // );
+              // $zoom.destroy();
             });
           </script>
+<style>
+.magnify > .magnify-lens {
+  width: 130px;
+  height: 130px;
+}
+</style>
 
-          <a href="./images/teaser.png">
+<style>
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+  
+  /* Style the active class, and buttons on mouse-over */
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }
+
+  </style>
+
+<!-- .magnify > .magnify-lens {
+  width: 50px;
+  height: 50px;
+} -->
+
+          <!-- <a href="./images/teaser.png">
             <img id="sample-teaser" src="./images/teaser.png" alt="Sample image" class="zoom">
-          </a>
+          </a> -->
 
 
           <div class="column has-text-centered">
@@ -144,7 +190,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -152,7 +198,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link TODO. -->
               <!-- <span class="link-block">
                 <a href=""
@@ -204,34 +250,34 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-teaser">
           <video poster="" id="teaser" autoplay controls muted loop playsinline height="100%">
-            <source src="./videos/teaser.mp4"
+            <source src="./videos_compressed/teaser.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-kitchen">
           <video poster="" id="kitchen" autoplay controls muted loop playsinline height="100%">
-            <source src="./videos/kitchen.mp4"
+            <source src="./videos_compressed/kitchen.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-plant">
           <video poster="" id="plant" autoplay controls muted loop playsinline height="100%">
-            <source src="./videos/plant.mp4"
+            <source src="./videos_compressed/plant.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-night">
           <video poster="" id="night" autoplay controls muted loop playsinline height="100%">
-            <source src="./videos/night.mp4"
+            <source src="./videos_compressed/night.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <!-- <div class="item item-dog" >
+        <div class="item item-dog" >
           <video poster="" id="dog" autoplay controls muted loop playsinline height="1024" width="768">
-            <source src="./videos/dog_video.mp4"
+            <source src="./videos_compressed/dog_video.mp4"
                     type="video/mp4">
           </video>
-        </div> -->
+        </div>
         <!-- <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
             <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
@@ -250,6 +296,93 @@
                     type="video/mp4">
           </video>
         </div> -->
+      </div>
+    </div>
+    <div  class="columns is-centered has-text-centered" style="text-align: center;">  
+       <p><br/>Using dual-camera, we can control defocus by simply passing a defocus map to the model (shown on top left). First frame of each video is the input view.</p> </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Defocus-Control Demo</h2>
+
+        <!-- Interpolating. -->
+        <!-- <h3 class="title is-4">Interpolating states</h3> -->
+        <div class="content has-text-justified">
+          <p>
+            Using a single capture with dual-camera, we can perform post-capture refocus and DoF control by simulating different apertures. Below is the captured frame that is used as an input. You can interactively change the refocus and depth of field to see how our method can be used in the real world.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <!-- <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div> -->
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <p><i><font color="red">Click</font> on a subject to refocus</i></p>
+          <p><i>and use the slider for DoF Control</i></p>
+          <div class="field is-horizontal">
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <!-- <label class="label" style="width: 10%; vertical-align: middle; margin: 0; padding: 0;"><img src="./static/images/large_aperture.png" width="30" border="1"></label> -->
+              <label class="label" style="width: 8%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/large_aperture.png" width="30" border="1"></label>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="100" value="0" type="range" style="width: 84%;">
+              <label class="label" style="width: 8%; vertical-align: middle; margin: 0; padding: 0;"><img src="./static/images/small_aperture.png" width="30" border="1"></label>
+            </div>
+          </div>
+
+          
+          <p>
+            <br/>
+          The interactive demo above is using a SINGLE capture with dual-camera. A photo captured with the main camera, also called wide (<b>W</b>), which has high resolution and shallow depth of field (DoF) and a photo from the ultra-wide camera (<b>UW</b>) which has a deep DoF but lower resolution. Our method can combine the two inputs to get a controllable DoF while maintaining high resolution! <br/> Below we show the inputs for this example. 
+          <br/><br/>
+        </p>
+        <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+          <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/src_w.jpg" border="1"></label>
+          <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/src_uw2.jpg" border="1"></label>
+        </div>
+        <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+          <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><b>W</b> Input</label>
+          <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><b>UW</b> Input</label>
+        </div>
+      </div>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
+
       </div>
     </div>
   </div>
@@ -301,6 +434,322 @@
     </div>
     <!--/ Abstract. -->
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How Did We Build It?</h2>
+        <div class="content has-text-justified">
+          We can't collect dataset of smartphone photos with variable depth of fields (due to the fix aperture), but we CAN refocus!  Since image refocus requires deblurring and blurring different regions of the image at the same time, that means that image refocus is at least as hard as DoF Control. Based on this observation, we hypothesize that a model trained on image refocus can also perform DoF control, so we use image refocus as a <i>proxy task</i> to learn arbitrary defocus contorl. So to train a model, we collected a dataset of 100 focus-stacks. <br> <br>
+          <center>
+          <img src="./static/images/dataset_vis_png.png"  width="500">
+        </center>
+        <br> 
+        We train our defocus control model (Detail Fusion Network -- DFNet) to refocus using dual-camera input, by giving it input and target defocus maps. The value of each pixel in the defocus map is proportional to how blurry that pixel is. <br> <br>
+        <center>
+          <img src="./static/images/refocus_idea_website.webp"  width="500">
+        </center>
+
+        <br> 
+        Then after training the model to refocus, we can perform arbitrary defocus control by simply maniuplating the target defocus map at test time! <br> <br>
+
+        <center>
+          <img src="./static/images/test_time_demonstration_webstie.webp" width="500">
+        </center>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison with Baselines</h2>
+        <div class="content has-text-justified">
+
+          <h3 class="title is-4">Deblurring</h3>
+
+          <button class="btn active" id="example1_deblurring_btn" onclick="changedata(0)">Example 1</button>
+          <button class="btn" id="example2_deblurring_btn" onclick="changedata(1)">Example 2</button>
+          <label class="label"><br/></label>
+
+          <div id="kitchen_deblurring">
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+            <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
+              <img src="./static/images/comparisons/kitchen_src_w.webp" border="1" class="zoom">
+            </label>
+
+            <label class="label" id="example1_deblurring_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+              <img src="./static/images/comparisons/match_fov_uw_final_kitchen.webp" border="1" class="zoom">
+            </label>
+
+
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+              <img src="./static/images/comparisons/kitchen_GT.webp" border="1" class="zoom"></label>
+          </div>
+          <!-- <img src=" border="1" class="zoom"> -->
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <button class="btn active" id="example1_W_input" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+            onclick="toggleimage('example1_deblurring_w', 'example1_deblurring_uw', 'example1_W_input', 'example1_UW_input')"
+            >W Input</button>
+            <button class="btn" id="example1_UW_input" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+            onclick="toggleimage('example1_deblurring_uw', 'example1_deblurring_w', 'example1_UW_input', 'example1_W_input')"
+            >UW Input</button>
+
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+          </div>
+          <label class="label"><br/></label>
+
+          <div class="compare">
+            <!-- The before image is first -->
+            <img src="./static/images/comparisons/kitchen_baseline.webp" />
+            <!-- The after image is last -->
+            <img src="./static/images/comparisons/kitchen_ours.webp" />
+           </div>
+           </div>
+
+           <div id="book_deblurring">
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+            <label class="label" id="example2_deblurring_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+              <img src="./static/images/comparisons/book_src_w.webp" border="1" class="zoom">
+            </label>
+            <label class="label" id="example2_deblurring_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+              <img src="./static/images/comparisons/book_uw.webp" border="1" class="zoom">
+            </label>
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+              <img src="./static/images/comparisons/book_GT.webp" border="1" class="zoom"></label>
+          </div>
+          <!-- <img src=" border="1" class="zoom"> -->
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <button class="btn active" id="example2_W_input" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+            onclick="toggleimage('example2_deblurring_w', 'example2_deblurring_uw', 'example2_W_input', 'example2_UW_input')"
+            >W Input</button>
+            <button class="btn" id="example2_UW_input" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+            onclick="toggleimage('example2_deblurring_uw', 'example2_deblurring_w', 'example2_UW_input', 'example2_W_input')"
+            >UW Input</button>
+
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+          </div>
+          <label class="label"><br/></label>
+
+          <div class="compare">
+            <!-- The before image is first -->
+            <img src="./static/images/comparisons/book_baseline.webp" />
+            <!-- The after image is last -->
+            <img src="./static/images/comparisons/book_ours.webp" />
+           </div>
+           </div>
+           <center><h3 class="title is-5">Baseline | Ours</h3></center>
+
+           <h3 class="title is-4">Refocusing</h3>
+
+           <button class="btn active" id="example1_refocusing_btn" onclick="changeexample('cafeteria_refocusing', 'microkitchen_refocusing', 'example1_refocusing_btn', 'example2_refocusing_btn')">Example 1</button>
+           <button class="btn" id="example2_refocusing_btn" onclick="changeexample('microkitchen_refocusing', 'cafeteria_refocusing', 'example2_refocusing_btn',  'example1_refocusing_btn')">Example 2</button>
+           <label class="label"><br/></label>
+
+           <div id="cafeteria_refocusing">
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" id="example1_refocusing_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
+                <img src="./static/images/comparisons/cafeteria_src_w.webp" border="1" class="zoom">
+              </label>
+  
+              <label class="label" id="example1_refocusing_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/comparisons/cafeteria_uw.webp" border="1" class="zoom">
+              </label>
+  
+  
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                <img src="./static/images/comparisons/cafeteria_GT.webp" border="1" class="zoom"></label>
+            </div>
+            <!-- <img src=" border="1" class="zoom"> -->
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <button class="btn active" id="example1_W_input_refocusing" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+              onclick="toggleimage('example1_refocusing_w', 'example1_refocusing_uw', 'example1_W_input_refocusing', 'example1_UW_input_refocusing')"
+              >W Input</button>
+              <button class="btn" id="example1_UW_input_refocusing" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+              onclick="toggleimage('example1_refocusing_uw', 'example1_refocusing_w', 'example1_UW_input_refocusing', 'example1_W_input_refocusing')"
+              >UW Input</button>
+  
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+            </div>
+            <label class="label"><br/></label>
+  
+            <div class="compare">
+              <!-- The before image is first -->
+              <img src="./static/images/comparisons/cafeteria_baseline.webp" />
+              <!-- The after image is last -->
+              <img src="./static/images/comparisons/cafeteria_ours.webp" />
+             </div>
+             </div>
+  
+             <div id="microkitchen_refocusing">
+             <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+              <label class="label" id="example2_refocusing_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                <img src="./static/images/comparisons/microkitchen_src_w.webp" border="1" class="zoom">
+              </label>
+              <label class="label" id="example2_refocusing_uw" style="width: 49%; vertical-align: middle;margin: 0; padding: 0; display: none;">
+                <img src="./static/images/comparisons/microkitchen_uw.webp" border="1" class="zoom">
+              </label>
+              <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+                <img src="./static/images/comparisons/microkitchen_target.webp" border="1" class="zoom"></label>
+            </div>
+            <!-- <img src=" border="1" class="zoom"> -->
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+              <button class="btn active" id="example2_W_input_refocusing" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+              onclick="toggleimage('example2_refocusing_w', 'example2_refocusing_uw', 'example2_W_input_refocusing', 'example2_UW_input_refocusing')"
+              >W Input</button>
+              <button class="btn" id="example2_UW_input_refocusing" style="width: 23.5%;  margin: 0; padding: 0; text-align: center;"
+              onclick="toggleimage('example2_refocusing_uw', 'example2_refocusing_w', 'example2_UW_input_refocusing', 'example2_W_input_refocusing')"
+              >UW Input</button>
+  
+              <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+            </div>
+            <label class="label"><br/></label>
+  
+            <div class="compare">
+              <!-- The before image is first -->
+              <img src="./static/images/comparisons/mircokitechen_baseline.webp" />
+              <!-- The after image is last -->
+              <img src="./static/images/comparisons/microkitchen_ours.webp" />
+             </div>
+             </div>
+             <center><h3 class="title is-5">Baseline | Ours</h3></center>
+
+           <!-- <h3 class="title is-4">Blurring</h3>
+
+           <button class="btn active" id="example1_blurring_btn" onclick="changeexample('game_room_blurring', 'office_plant_blurring', 'example1_blurring_btn', 'example2_blurring_btn')">Example 1</button>
+           <button class="btn" id="example2_blurring_btn" onclick="changeexample('office_plant_blurring', 'game_room_blurring', 'example2_blurring_btn', 'example1_blurring_btn')">Example 2</button>
+           <label class="label"><br/></label>
+ 
+           <div id="game_room_blurring">
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+             <label class="label" id="example1_deblurring_w" style="width: 49%; vertical-webp: middle;margin: 0; padding: 0;">
+               <img src="./static/images/comparisons/gameroom_aif.webp" border="1" class="zoom">
+             </label>
+
+ 
+ 
+             <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+               <img src="./static/images/comparisons/gameroom_src_w.webp" border="1" class="zoom"></label>
+           </div>
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Input</label>
+             <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+           </div>
+           <label class="label"><br/></label>
+ 
+           <div class="compare">
+             <img src="./static/images/comparisons/gameroom_baseline.webp" />
+             <img src="./static/images/comparisons/gameroom_ours.webp" />
+            </div>
+            </div>
+ 
+            <div id="office_plant_blurring">
+            <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+             <label class="label" id="example2_deblurring_w" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+               <img src="./static/images/comparisons/office_plant_aif.webp" border="1" class="zoom">
+             </label>
+             <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;">
+               <img src="./static/images/comparisons/office_plant_src_w.webp" border="1" class="zoom"></label>
+           </div>
+
+           <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; ">
+            <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Input</label>
+             <label class="label" style="width: 49%; margin: 0; padding: 0; text-align: center;">Ground Truth</label>
+           </div>
+           <label class="label"><br/></label>
+ 
+           <div class="compare">
+             <img src="./static/images/comparisons/office_plant_baseline.webp" />
+             <img src="./static/images/comparisons/office_plant_ours.webp"/>
+            </div>
+            </div>
+            <center><h3 class="title is-5">Baseline | Ours</h3></center>  -->
+          
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Creative Applications</h2>
+        <div class="content has-text-justified">
+        <body>Our method allows for arbitrary defocus control by simply providing the desired defocus map to the model. The defocus control does not have to be physically realistic, so you can go wild with your imaginations! Here we show some examples that we thought of, and include the source and target defocus maps used for each example. <br/></body>
+
+          <!-- <div id="comparison">
+            <figure>
+              <div id="divisor"></div>
+            </figure>
+            <input type="range" min="0" max="100" value="50" id="compare_slider" oninput="moveDivisor()">
+          </div> -->
+
+          <h3 class="title is-4">Tilt shift effect</h3>
+          <body><a href="https://www.adobe.com/creativecloud/photography/discover/tilt-shift-photography.html"> Tilt shift </a> can be used to control the depth of field, and produce minitaure-like effect. With hardware, it is done by tilting the lens with respect to the sensor, but here we simulate it by setting the target defocus map to correspond to a very narrow DoF. At the top of the image below, you can view the source defocus map (all-in-focus so all black) and target defocus map used for this example. </body>
+          <div class="compare">
+            <!-- The before image is first -->
+            <img src="./static/images/tiltshift_input_def.jpg"/>
+            <!-- The after image is last -->
+            <img src="./static/images/tiltshift_output_def.jpg" />
+            
+           </div>
+           <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+
+           <h3 class="title is-4">Split focus effect</h3>
+           <body><a href="https://www.studiobinder.com/blog/split-diopter-lens/">Split focus</a> is a cinematic effect used in movies to emphasize and focus on two subjects at different distances from the camera. It often requires custom lens to make it work with hardware, but we can simply do it in software with our method. Here we set the left half of the photo to be focused on the woman, and the right half is focused on the man and with a reduced DoF for emphasis. You can compare the source defocus map and target defocus map used to generate this photo.</body>
+          <div class="compare">
+            <!-- The before image is first -->
+            <img src="./static/images/splitfocus_input_def.jpg" />
+            <!-- The after image is last -->
+            <img src="./static/images/splitfocus_output_def.jpg" />
+           </div>
+
+           <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+
+           <h3 class="title is-4">Content driven defocus control</h3>
+           <body>Here we choose to highlight the woman and dog by simply setting them to be all-in-focus and blur out everything else. We simply set the target defocus map to be the segmentation mask we created.</body>
+           <center>
+           <div class="compare" style=" width: 65%;">
+            <!-- The before image is first -->
+            <img src="./static/images/seg_mask_input_def.jpg"/>
+            <!-- The after image is last -->
+            <img src="./static/images/seg_mask_output_def.jpg"/>
+           </div>
+          </center>
+
+          <center><h3 class="title is-5">Input &nbsp;&nbsp;|&nbsp;&nbsp;Output</h3></center>
+
+          <!-- <div id="comparison_splitfocus">
+            <figure>
+              <div id="divisor"></div>
+            </figure>
+            <input type="range" min="0" max="100" value="50" id="compare_slider" oninput="moveDivisorSplitfocus()">
+          </div> -->
+          
+
+          <!-- <body>
+            <div class='container'>
+              <div class='img background-img'></div>
+              <div class='img foreground-img'></div>
+              <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider_before_after">
+              <div class='slider-button'></div>
+            </div>
+          </body> -->
+
+          <!-- <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/tiltshift_src_w.jpg" border="1"></label>
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/tiltshift_output.jpg" border="1"></label>
+          </div> -->
+<!-- 
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/split_focus_input.jpg" border="1"></label>
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/split_focus_output.jpg" border="1"></label>
+          </div>
+
+          <div class="field-body" style="display:flex; flex-wrap: wrap; justify-content: space-between; align-items: center; vertical-align: middle;">
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/seg_mask_input.jpg" border="1"></label>
+            <label class="label" style="width: 49%; vertical-align: middle;margin: 0; padding: 0;"><img src="./static/images/seg_mask_output.jpg" border="1"></label>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+
     <!-- Paper video. -->
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -315,154 +764,34 @@
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        Interpolating.
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        / Interpolating.
-
-        Re-rendering.
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        / Re-rendering.
-
-      </div>
-    </div> -->
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
+<!-- <div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title">Quantitative Evaluation</h2>
   </div>
-</section>
+</div>
+
+  <section class="section" id="References">
+    <div class="container is-max-desktop content">
+      <h2 class="title">References</h2>
+    </div>
+  </section> -->
+
+
+
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{alzayer2023defocuscontrol,
-  author    = {Alzayer, Hadi and Abuolaim, Abdullah and Chun Chan, Leung and Yang, Yang and Chen, Yang and Huang, Jia-Bin and Karr, Abhishek},
-  title     = {DC2: Dual-Camera Defocus Control by Learning to Refocus},
-  journal   = {CVPR2023},
-  year      = {2021},
-}</code></pre>
-  </div>
+    <pre><code>@inproceedings{alzayer2023defocuscontrol,
+      ttitle={DC2: Dual-Camera Defocus Control by Learning to Refocus},
+      author={Alzayer, Hadi and Abuolaim, Abdullah and Chun Chan, Leung and Yang, Yang and Chen Lou, Ying and Huang, Jia-Bin and Kar, Abhishek},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      pages={--},
+      year={2023}
+    }</code></pre>
+</div>
 </section>
 
 
