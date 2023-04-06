@@ -254,20 +254,6 @@ function toggleimage(image_to_show, image_to_hide, btn_to_active, btn_to_normal)
   document.getElementById(btn_to_normal).className = 'btn';
 }
 
-const images = document.querySelectorAll('.slider-image');
-let loadedCount = 0;
-
-images.forEach(function(image) {
-  image.onload = function() {
-    loadedCount++;
-    console.log("loaded count " + loadedCount);
-
-    if (loadedCount === images.length) {
-      console.log('All images loaded successfully');
-    }
-  };
-});
-
 // $(function(){
 //   console.log("num of slider images " + images.length);
 //   $(".compare").twentytwenty({
@@ -282,7 +268,7 @@ images.forEach(function(image) {
 //   });
 // });
 
-$('.compare').imagesLoaded( function() {
+$('.compare').imagesLoaded(function() {
   $(".compare").twentytwenty({
     default_offset_pct: 0.5, // How much of the before image is visible when the page loads
     orientation: 'horizontal', // Orientation of the before and after images ('horizontal' or 'vertical')
