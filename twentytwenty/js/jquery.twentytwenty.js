@@ -12,6 +12,11 @@
       click_to_move: false
     }, options);
 
+
+    $(window).load(function() {
+      $(window).trigger("resize.twentytwenty");
+    });
+
     return this.each(function() {
 
       var sliderPct = options.default_offset_pct;
