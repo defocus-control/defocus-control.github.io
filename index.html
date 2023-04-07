@@ -7,7 +7,7 @@
   <meta name="keywords" content="defocus-control, dual-camera, computational photography">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DC2: Dual-Camera Defocus Control by Learning to Refocus</title>
-  
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNXPC3HP9"></script>
 <script>
@@ -86,7 +86,7 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hadizayer.github.io/AutoPhoto_jpgage/">
+          <a class="navbar-item" href="https://hadizayer.github.io/AutoPhoto_webpage/">
             AutoPhoto
           </a>
         </div>
@@ -199,12 +199,12 @@
               </span>
               <span class="link-block">
                 <!-- arxiv Link add TODO. -->
-                <a href=""
+                <a href="https://t.co/bJnAWGcT8b"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv (soon)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -482,7 +482,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">How Did We Build It?</h2>
         <div class="content has-text-justified">
-          We can't collect dataset of smartphone photos with variable depth of fields (due to the fix aperture), but we CAN refocus!  Since image refocus requires deblurring and blurring different regions of the image at the same time, that means that image refocus is at least as hard as DoF Control. Based on this observation, we hypothesize that a model trained on image refocus can also perform DoF control, so we use image refocus as a <i>proxy task</i> to learn arbitrary defocus contorl. So to train a model, we collected a dataset of 100 focus-stacks. <br> <br>
+          We can't collect dataset of smartphone photos with variable depth of fields (due to the fix aperture), but we CAN refocus!  Since image refocus requires deblurring and blurring different regions of the image at the same time, that means that image refocus is at least as hard as DoF Control. Based on this observation, we hypothesize that a model trained on image refocus can also perform DoF control, so we use image refocus as a <i>proxy task</i> to learn arbitrary defocus control. So to train a model, we collected a dataset of 100 focus-stacks. <br> <br>
           <center>
           <img src="./static/images/dataset_vis_png.jpg"  width="500">
         </center>
@@ -734,7 +734,7 @@
           </div> -->
 
           <h3 class="title is-4">Tilt shift effect</h3>
-          <body><a href="https://www.adobe.com/creativecloud/photography/discover/tilt-shift-photography.html"> Tilt shift </a> can be used to control the depth of field, and produce minitaure-like effect. With hardware, it is done by tilting the lens with respect to the sensor, but here we simulate it by setting the target defocus map to correspond to a very narrow DoF. At the top of the image below, you can view the source defocus map (all-in-focus so all black) and target defocus map used for this example. </body>
+          <body><a href="https://www.adobe.com/creativecloud/photography/discover/tilt-shift-photography.html"> Tilt shift </a> can be used to control the depth of field, and produce miniature-like effect. With hardware, it is done by tilting the lens with respect to the sensor, but here we simulate it by setting the target defocus map to correspond to a very narrow DoF. At the top of the image below, you can view the source defocus map (all-in-focus so all black) and target defocus map used for this example. </body>
           <div class="compare">
             <!-- The before image is first -->
             <img class="slider-image" src="./static/images/tiltshift_input_def_labelled.jpg"/>
