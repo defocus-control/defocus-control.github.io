@@ -266,8 +266,6 @@ $(function(){
     move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
     click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
   });
-  document.getElementById('book_deblurring').style.display = 'none';
-  document.getElementById('microkitchen_refocusing').style.display = 'none';
 });
 
 $('.compare').imagesLoaded(function() {
@@ -297,6 +295,8 @@ setTimeout(function() {
   // });
   window.dispatchEvent(new Event('resize')); 
   console.log("loaded after tiemout");
+  document.getElementById('book_deblurring').style.display = 'none';
+  document.getElementById('microkitchen_refocusing').style.display = 'none';
   }, 2000);
 
 // $(window).load(function() {
